@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>メニュー</title>
+		<meta charset="UTF-8" />
+    	<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1 th:text="#{content.title}">Menu</h1>
+		<p th:text="${msg}"></p>
+ 		<p th:text="${value}"></p>
+
+		<div>
+			<a href="/">ログインページ</a>
+			<a href="/find">一覧</a>
+			<a href="/message">メッセージ</a>
+			<a href="">ログアウト</a>
+		</div>
+	</body>
+</html>

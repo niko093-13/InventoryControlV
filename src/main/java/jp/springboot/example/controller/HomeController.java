@@ -61,6 +61,7 @@ public class HomeController {
 	}
 	
 	// FIND 検索
+	/*
 	@RequestMapping(value="/find", method=RequestMethod.GET)
 	public ModelAndView find(ModelAndView mav) {
 		mav.setViewName("find");
@@ -93,7 +94,7 @@ public class HomeController {
 		}
 		return mav;
 	}
-
+*/
 
 
 }

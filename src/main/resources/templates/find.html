@@ -6,6 +6,18 @@
     	<link href="css/style.css" rel="stylesheet" />
 	</head>
 	<body>
+		<h1 th:text="${title}">一覧</h1>
+		<p th:text="${msg}"></p>
+		<table>
+		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループ</th></tr>
+		<tr th:each="obj : ${datalist}">
+			<td th:text="${obj.sup_code}"></td>
+			<td th:text="${obj.sup_name}"></td>
+			<td th:text="${obj.price}"></td>
+			<td th:text="${obj.group_code}"></td>
+		</tr>
+		</table>
+<!-- 		
 		<h1 th:text="#{content.title}">一覧表</h1>
 		<p th:text="${msg}"></p>
 
@@ -29,5 +41,6 @@
 				<td><a href="/edit/${obj.id}">編集</a></td>
 			</tr>
 		</table>
+		 -->
 	</body>
 </html>

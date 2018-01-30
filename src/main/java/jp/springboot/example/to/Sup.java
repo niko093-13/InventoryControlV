@@ -13,32 +13,32 @@ public class Sup {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column
-	private long sup_code;
+	@Column(name="sup_code")
+	private long scode;
 	
-	@Column(length = 50, nullable = false)
-	private String sup_name;
+	@Column(name="sup_name", length = 50, nullable = false)
+	private String sname;
 	
 	@Column(nullable = false)
 	private Integer price;
 	
-	@Column(length = 3, nullable = false)
-	private String group_code;
+	@Column(name="group_code", length = 3, nullable = false)
+	private String gcode;
 
-	public long getSup_code() {
-		return sup_code;
+	public long getScode() {
+		return scode;
 	}
 
-	public void setSup_code(long sup_code) {
-		this.sup_code = sup_code;
+	public void setScode(long scode) {
+		this.scode = scode;
 	}
 
-	public String getSup_name() {
-		return sup_name;
+	public String getSname() {
+		return sname;
 	}
 
-	public void setSup_name(String sup_name) {
-		this.sup_name = sup_name;
+	public void setSname(String sname) {
+		this.sname = sname;
 	}
 
 	public Integer getPrice() {
@@ -49,11 +49,12 @@ public class Sup {
 		this.price = price;
 	}
 
-	public String getGroup_code() {
-		return group_code;
+	public String getGcode() {
+		return gcode;
 	}
 
-	public void setGroup_code(String group_code) {
-		this.group_code = group_code;
+	public void setGcode(String gcode) {
+		this.gcode = gcode;
 	}
+
 }

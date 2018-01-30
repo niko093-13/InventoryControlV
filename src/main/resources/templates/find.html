@@ -9,38 +9,22 @@
 		<h1 th:text="${title}">一覧</h1>
 		<p th:text="${msg}"></p>
 		<table>
-		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループ</th></tr>
-		<tr th:each="obj : ${datalist}">
-			<td th:text="${obj.sup_code}"></td>
-			<td th:text="${obj.sup_name}"></td>
-			<td th:text="${obj.price}"></td>
-			<td th:text="${obj.group_code}"></td>
-		</tr>
-		</table>
-<!-- 		
-		<h1 th:text="#{content.title}">一覧表</h1>
-		<p th:text="${msg}"></p>
-
-		<table>
 			<form action="/find" method="post">
-				<tr><td>検索:</td>
-					<td><input type="text" name="find" size="20" th:value="${value}" /></td>
-				</tr>
-				<tr><td></td>
-					<td><input type="submit" /></td></tr>
+			<tr><td>検索:</td>
+				<td><input type="text" name="find" size="20" th:value="${value}" /></td>
+			</tr>
+			<tr><td></td>
+				<td><input type="submit" /></td></tr>
 			</form>
 		</table>
-		<hr />
 		<table>
-			<tr><th>id</th><th>ユーザー名</th><th>パスワード</th><th>日時</th></tr>
-			<tr th:each="obj : ${datalist}">
-				<td th:text="${obj.id}"></td>
-				<td th:text="${obj.name}"></td>
-				<td th:text="${obj.pass}"></td>
-				<td th:text="${obj.date}"></td>
-				<td><a href="/edit/${obj.id}">編集</a></td>
-			</tr>
+		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループ</th></tr>
+		<tr th:each="obj : ${datalist}">
+			<td th:text="${obj.scode}"></td>
+			<td th:text="${obj.sname}"></td>
+			<td th:text="${obj.price}"></td>
+			<td th:text="${obj.gcode}"></td>
+		</tr>
 		</table>
-		 -->
 	</body>
 </html>

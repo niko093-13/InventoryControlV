@@ -59,42 +59,4 @@ public class HomeController {
 		}
 		return mav;
 	}
-	
-	// FIND 検索
-	/*
-	@RequestMapping(value="/find", method=RequestMethod.GET)
-	public ModelAndView find(ModelAndView mav) {
-		mav.setViewName("find");
-		mav.addObject("title", "Find Page");
-		mav.addObject("msg", "一覧表");
-		System.out.println("1");
-		Iterable<User> list = repository.findAll();
-		System.out.println("2");
-		mav.addObject("datalist", list);
-		System.out.println("3");
-		return mav;
-	}
-
-	@RequestMapping(value="/find", method=RequestMethod.POST)
-	@Transactional(readOnly=false)
-	public ModelAndView search(
-			@RequestParam("find") String param,
-			ModelAndView mav) {
-		mav.setViewName("find");
-		
-		if(param == "") {
-			mav = new ModelAndView("redirect:/find");
-			
-		} else {
-			mav.addObject("title", "Find result");
-			mav.addObject("msg", "「" + param + "」の検索結果");
-			mav.addObject("value", param);
-			List<User> list = (List<User>) repository.findById(param);
-			mav.addObject("datalist", list);
-		}
-		return mav;
-	}
-*/
-
-
 }

@@ -9,8 +9,9 @@ import jp.springboot.example.to.Sup;
 
 @Repository
 public interface SupRepository extends JpaRepository<Sup, Long> {
-
-//	public Sup findById(Long sup_code);
-//	public List<Sup> findBySup_nameLike(String sup_name);
+	
+//	public Sup findByScode(String sup_code);
+	public List<Sup> findBySname(String sup_name);
+//	public List<Sup> findBySnameLike(String sup_name);
 //	public List<Sup> findByIdIsNotNullOrderByIdDesc();
 }

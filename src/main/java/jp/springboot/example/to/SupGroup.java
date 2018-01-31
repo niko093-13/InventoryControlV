@@ -2,8 +2,6 @@ package jp.springboot.example.to;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -21,12 +19,13 @@ public class SupGroup {
 	public String getGcode() {
 		return gcode;
 	}
+
+	public void setGcode(String gcode) {
+		this.gcode = gcode;
+	}
 	
 	public String getGname() {
 		return gname;
-	}
-	public void setGcode(String gcode) {
-		this.gcode = gcode;
 	}
 
 	public void setGname(String gname) {

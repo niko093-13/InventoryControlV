@@ -8,23 +8,25 @@
 	<body>
 		<h1 th:text="${title}">一覧</h1>
 		<p th:text="${msg}"></p>
+		<form action="/find" method="post">
 		<table>
-			<form action="/find" method="post">
 			<tr><td>検索:</td>
 				<td><input type="text" name="find" size="20" th:value="${value}" /></td>
 			</tr>
 			<tr><td></td>
-				<td><input type="submit" /></td></tr>
-			</form>
+			<td><input type="submit" /></td></tr>
 		</table>
+		</form>
 		<table>
-		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループコード</th><th>グループ</th></tr>
+		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループコード</th><th>グループ</th><th>数量</th></tr>
 		<tr th:each="obj : ${datalist}">
 			<td th:text="${obj.scode}"></td>
 			<td th:text="${obj.sname}"></td>
 			<td th:text="${obj.price}"></td>
 			<td th:text="${obj.gcode}"></td>
 			<td th:text="${obj.supGroup.gname}"></td>
+			<td th:text="${obj.supQuantity.svalue}"></td>
+			
 		</tr>
 		</table>
 	</body>

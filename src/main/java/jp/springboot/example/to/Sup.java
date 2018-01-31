@@ -31,7 +31,11 @@ public class Sup {
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="group_code", insertable = false, updatable = false )  
 	private SupGroup supGroup;
-	
+
+	@ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="sup_code", insertable = false, updatable = false )  
+	private SupQuantity supQuantity;
+
 	public long getScode() {
 		return scode;
 	}
@@ -70,6 +74,14 @@ public class Sup {
 
 	public void setSupGroup(SupGroup supGroup) {
 		this.supGroup = supGroup;
+	}
+	
+	public SupQuantity getSupQuantity() {
+		return supQuantity;
+	}
+
+	public void setSupQuantity(SupQuantity supQuantity) {
+		this.supQuantity = supQuantity;
 	}
 	
 

@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
 
 @Entity
 @Table(name="Supplier")
@@ -25,6 +28,10 @@ public class Sup {
 	@Column(name="group_code", length = 3, nullable = false)
 	private String gcode;
 
+	@ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="group_code", insertable = false, updatable = false )  
+	private SupGroup supGroup;
+	
 	public long getScode() {
 		return scode;
 	}
@@ -56,5 +63,14 @@ public class Sup {
 	public void setGcode(String gcode) {
 		this.gcode = gcode;
 	}
+	
+	public SupGroup getSupGroup() {
+		return supGroup;
+	}
+
+	public void setSupGroup(SupGroup supGroup) {
+		this.supGroup = supGroup;
+	}
+	
 
 }

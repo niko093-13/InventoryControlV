@@ -18,12 +18,13 @@
 			</form>
 		</table>
 		<table>
-		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループ</th></tr>
+		<tr><th>CODE</th><th>商品名</th><th>金額</th><th>グループコード</th><th>グループ</th></tr>
 		<tr th:each="obj : ${datalist}">
 			<td th:text="${obj.scode}"></td>
 			<td th:text="${obj.sname}"></td>
 			<td th:text="${obj.price}"></td>
 			<td th:text="${obj.gcode}"></td>
+			<td th:text="${obj.supGroup.gname}"></td>
 		</tr>
 		</table>
 	</body>
